@@ -13,11 +13,12 @@ jobs:
           with: 
             node-version: '16.x'
             cache: npm
-# - run: make install
         - run: make setup
-# - run: make start
         - run: make test
         - run: make lint
+        - run:
+          env:
+            secrets.SNYK_TOKEN: 226fcfc8-240a-497c-96e9-d2a215c52f5e 
         - name: Run snyk
           uses: snyk/actions/node@master
           env:
