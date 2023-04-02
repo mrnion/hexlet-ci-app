@@ -18,3 +18,7 @@ jobs:
 # - run: make start
         - run: make test
         - run: make lint
+        - name: Run snyk
+          uses: snyk/actions/node@master
+          env:
+            SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
