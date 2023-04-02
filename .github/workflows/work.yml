@@ -1,11 +1,18 @@
 name: work1
+#название воркфлоу
 on: push
+#запуск по событию пуш
 jobs:
     build:
       runs-on: ubuntu-latest
+#ранер на последнем линуксе
       steps:
         - uses: actions/checkout@v3
-        - run: make install
+#копирование репозитория
+        - uses: action/setup-node@v3
+          with: 
+            node-version: [16.0]
+        #- run: make install
         - run: make setup
         - run: make start
         - run: make test
