@@ -17,8 +17,8 @@ jobs:
         - run: make test
         - run: make lint
         - run:
-          env:
-            secrets.SNYK_TOKEN: 226fcfc8-240a-497c-96e9-d2a215c52f5e 
+            env:
+              secrets.SNYK_TOKEN: 226fcfc8-240a-497c-96e9-d2a215c52f5e 
         - name: Run snyk
           uses: snyk/actions/node@master
           env:
