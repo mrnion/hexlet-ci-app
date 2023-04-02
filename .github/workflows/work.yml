@@ -12,7 +12,8 @@ jobs:
         - uses: action/setup-node@v3
           with: 
             node-version: '16.x'
-#- run: make install
+            cache: npm
+        - run: make install
         - run: make setup
         - run: make start
         - run: make test
