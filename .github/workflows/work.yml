@@ -11,8 +11,8 @@ jobs:
 #копирование репозитория
         - uses: action/setup-node@v3
           with: 
-            node-version: [16.0]
-        #- run: make install
+            node-version: '16.x'
+#- run: make install
         - run: make setup
         - run: make start
         - run: make test
